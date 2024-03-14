@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
 
-app.use(() => {
+app.use((req, res) => {
   console.log("we got request");
+  res.send(`ini string dari respon`);
 });
 
 app.listen(8080, () => {
