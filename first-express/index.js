@@ -22,6 +22,16 @@ app.get("/about", (req, res) => {
   res.send("This is about page");
 });
 
+app.get("/blog/:judul", (req, res) => {
+  const { judul } = req.params;
+  res.send(`kita sedang melihat postingan dengan judul : ${judul}`);
+});
+
+app.get("/blog/:category/:judul/:author", (req, res) => {
+  const { category, judul, author } = req.params;
+  res.send(`Blog dengan kategori: ${category}| author: ${author} | ${judul}`);
+});
+
 app.get("*", (req, res) => {
   res.send("Halaman Tidak Ditemukan");
 });
