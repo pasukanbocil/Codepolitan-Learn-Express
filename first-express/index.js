@@ -7,7 +7,7 @@ const app = express();
 // });
 
 app.get("/", (req, res) => {
-  res.send("This is home page");
+  res.send(`<h1>This is homepage with H1</h1>`);
 });
 
 app.get("/cats", (req, res) => {
