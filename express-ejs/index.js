@@ -14,6 +14,11 @@ app.get("/rand", (req, res) => {
   res.render("random", { num });
 });
 
+app.get("/t/:tag", (req, res) => {
+  const { tag } = req.params;
+  res.render("tags", { tag });
+});
+
 app.listen(8080, () => {
   console.log(`listening on host http://localhost:8080`);
 });
