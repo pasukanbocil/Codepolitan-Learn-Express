@@ -19,6 +19,11 @@ app.get("/t/:tag", (req, res) => {
   res.render("tags", { tag });
 });
 
+app.get("/cats", (req, res) => {
+  const cats = ["Blue", "Rocket", "Monty", "Stephanie", "Winston"];
+  res.render("cats", { cats });
+});
+
 app.listen(8080, () => {
   console.log(`listening on host http://localhost:8080`);
 });
