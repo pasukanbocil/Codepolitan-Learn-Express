@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('partials/header.ejs') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random</title>
-</head>
+    <%- include('partials/navbar.ejs') %>
 
-<body>
+        <h1>Random number: <%= num %>
+        </h1>
+        <% if(num%2==0){%>
+            <h3>Angka Genap</h3>
+            <% } else { %>
+                <h3>ANgka Ganjil</h3>
+                <% } %>
 
-    <h1>Random number: <%= num %>
-    </h1>
-    <% if(num%2==0){%>
-        <h3>Angka Genap</h3>
-        <% } else { %>
-            <h3>ANgka Ganjil</h3>
-            <% } %>
+                    <h3>That number is: <%= num%2===0 ? 'even' : 'odd' %>
+                    </h3>
 
-                <h3>That number is: <%= num%2===0 ? 'even' : 'odd'  %>
-                </h3>
-</body>
-
-</html>
+                    <%- include('partials/footer.ejs') %>
